@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -6,13 +7,58 @@
 
 body{
     background-color: rgb(49, 43, 43);
+    font-family: 'Koulen', cursive;
     /* height: 100vh; */
 }
 
-h1{
-    color: aliceblue;
-    
-    text-align: center;
-    border: 2px solid rgb(203, 253, 67);
+hr{
+    border-top: 10px solid rgb(203, 253, 67);
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
+.status-table{
+    border: none;
+}
+.status-table th,td{
+    border: none;
+    /* font-size: 40px; */
+}
+
+.size40{
+    font-size: 40px;
+}
+#checking{
+    text-align: center;
+    color: white;
+}
+table{
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto 30px;
+    color: white;
+    border: 1px solid whitesmoke;
+}
+
+td,th{
+    border: 1px dotted yellowgreen;
+}
+
+h4{
+    color: white;
+    text-align: center;
+}
+
+.log{
+    color: yellow;
+}
+
+.footer{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(99, 112, 99);
+}

@@ -4,11 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
     <title>Internet</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app2.js"></script>
 </head>
 <body>
-    <h1>STATUS: <span id="status">ONLINE</span></h1>
+    <hr id="status-holder">
+    
+    <table class="status-table">
+        
+        <tr>
+            <th class="size40" id="status">Internet Checker!</th>
+        </tr>
+        
+    </table>
+    
+
+    <table>
+        <tr>
+            <th>Sign</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>🟢</td>
+            <td>Connected</td>
+        </tr>
+        <tr>
+            <td>🟡</td>
+            <td>Checking</td>
+        </tr>
+        <tr>
+            <td>🔴</td>
+            <td>Disconnected</td>
+        </tr>
+    </table>
+    <p id="checking">...</p>
+    <table>
+        <tr>
+            <th>Interval Time (sec)</th>
+        </tr>
+        <tr>
+            <th><input type="number" name="" id="delayTime" value="2"></th>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="setDelay()">SET</button></td>
+        </tr>
+    </table>
+
+    <h4>Last Log<br>[<span class="log">Kindly set a refresh interval.</span>]</h4>
+    <div class="footer">
+        <a href="https://about.me/subhranshu">Subhranshu</a>
+        <a href="https://github.com/subhranshuchoudhury/internetstatus/">Source-code</a>
+    </div>
+        
+    
+    
 </body>
 </html>
