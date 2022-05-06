@@ -10,7 +10,7 @@ var cI = (function() {
             var i = new Image();
             i.onload = this.online;
             i.onerror = this.offline;
-            i.src= `https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png?${Math.random()+1}`
+            i.src= `https://raw.githubusercontent.com/subhranshuchoudhury/internetstatus/main/test.png?${Math.random()}`
             // console.log(i.src);
             checkingDisplay.textContent = "🟡 Checking";
 
