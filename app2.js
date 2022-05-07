@@ -11,8 +11,7 @@ var cI = (function() {
             i.onload = this.online;
             i.onerror = this.offline;
             i.src= `https://raw.githubusercontent.com/subhranshuchoudhury/internetstatus/main/test.png?${Math.random()}`
-            // console.log(i.src);
-            checkingDisplay.textContent = "🟡 Checking";
+            checkingDisplay.textContent = "[ 🟡 Checking ]";
 
         }
     };
@@ -25,59 +24,53 @@ cI.online = function(){
     var displayStatus = document.querySelector("#status");
     var displayStatusHolder = document.querySelector("#status-holder");
     var checkingDisplay = document.querySelector("#checking");
-
-
-    // console.log('online :: '+Date()) 
-
-    displayStatus.textContent = "🟢 ONLINE"
-    checkingDisplay.textContent = ".";
-    displayStatusHolder.style.borderTop = `10px solid rgb(203, 253, 67)`;
+    displayStatus.textContent = "🚀 SERVER ONLINE"
+    checkingDisplay.textContent = "[Wait..]";
+    document.body.style.backgroundColor = "rgb(49, 43, 43)";
+    displayStatusHolder.style.borderTop = `30px solid rgb(203, 253, 67)`;
     document.querySelector(".log").textContent = `Online : ${Date()}`;
-
-
-
 };
 cI.offline = function(){
     var displayStatus = document.querySelector("#status");
     var displayStatusHolder = document.querySelector("#status-holder");
     var checkingDisplay = document.querySelector("#checking");
-
-    displayStatus.textContent = "🔴 OFFLINE";
-    checkingDisplay.textContent = ".";
-    displayStatusHolder.style.borderTop = `10px solid red`;
+    displayStatus.textContent = "🚫 OFFLINE";
+    document.body.style.backgroundColor = 'red';
+    playError();
+    checkingDisplay.textContent = "[Wait..]";
+    displayStatusHolder.style.borderTop = `30px solid red`;
     document.querySelector(".log").textContent = `Offline : ${Date()}`;
 
 
 };
 
 function setDelay(){
+    document.getElementById("timerTable").style.display = "none";
     clearInterval(intId);
     var delay = document.querySelector("#delayTime").value*1000;
     document.querySelector(".log").textContent = `You set interval of ${delay/1000} seconds. Kindly wait ${delay/1000} seconds.`
-    // console.log(delay);
     var intId = setInterval(function(){
         cI.test()
-        // console.log("🟡 Checking")
-
         delay = 1000;
     },delay);
 }
 
 window.addEventListener("offline",()=>{
-    
     document.querySelector("#status").textContent = "❌ NOT CONNECTED";
-
-    // console.log("offline")
 })
 
 
+function playError(){
+    var audio = new Audio("error.wav");
+    audio.play()
+    audio.currentTime = 0;
+}
+
+function moreDetails(){
+    const moreDetails = document.getElementById("moreDetails");
+    console.log(navigator)
+    moreDetails.innerHTML = `Server Details: ${navigator.userAgent}`;
+}
 
 
 
-
-
-// clearInterval(intId);
-
-
-
-// console.log()

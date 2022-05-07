@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Status!</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app2.js"></script>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/subhranshuchoudhury/internetstatus/main/favicon.png" type="image/x-icon">
-</head>
-<body>
-    <hr id="status-holder">
-    
-    <table class="status-table">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Internet Status!</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="app2.js"></script>
+        <link rel="shortcut icon" href="https://raw.githubusercontent.com/subhranshuchoudhury/internetstatus/main/favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <hr id="status-holder">
         
-        <tr>
-            <th class="size40" id="status">Internet Checker!</th>
-        </tr>
+        <table class="status-table">
+            
+            <tr>
+                <th class="size40" id="status">🩺 Server Checkup!</th>
+            </tr>
+            
+        </table>
         
-    </table>
-    
-
-    <table>
-        <tr>
-            <th>Sign</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>🟢</td>
-            <td>Connected</td>
-        </tr>
-        <tr>
-            <td>🟡</td>
-            <td>Checking</td>
-        </tr>
-        <tr>
-            <td>🔴</td>
-            <td>Disconnected</td>
-        </tr>
-    </table>
-    <p id="checking">...</p>
-    <table>
-        <tr>
-            <th>Interval Time (sec)</th>
-        </tr>
-        <tr>
-            <th><input type="number" name="" id="delayTime" value="2"></th>
-        </tr>
-        <tr>
-            <td colspan="2"><button onclick="setDelay()">SET</button></td>
-        </tr>
-    </table>
-
-    <h4>Last Log<br>[<span class="log">Kindly set a refresh interval.</span>]</h4>
-    <div class="footer">
-        <a href="https://about.me/subhranshu">@ssc</a>
-        <a href="https://github.com/subhranshuchoudhury/internetstatus/">Source-code</a>
-    </div>
+        <table>
+            <tr>
+                <th>Sign</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>🚀</td>
+                <td>Connected</td>
+            </tr>
+            <tr>
+                <td>🟡</td>
+                <td>Checking</td>
+            </tr>
+            <tr>
+                <td>🚫</td>
+                <td>Disconnected</td>
+            </tr>
+        </table>
+        <p id="checking">[SET DELAY TO START]</p>
+        <table id="timerTable">
+            <tr>
+                <th>Interval Time (sec)</th>
+            </tr>
+            <tr>
+                <th><input type="number" name="" id="delayTime" value="2"></th>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="setDelay()">SET</button></td>
+            </tr>
+        </table>
+        <center>
+        <h4>Last Log<br>[<span class="log">Kindly set a refresh interval.</span>]</h4>
+        <button onclick="moreDetails()">More Details</button>
+        <p id="moreDetails">...</p>
+        <div class="footer">
+            <a href="https://about.me/subhranshu">@ssc</a>
+            <a href="https://github.com/subhranshuchoudhury/internetstatus/">Source-code</a>
+        </div>
+        </center>
         
-    
-    
-</body>
+        
+        
+    </body>
 </html>

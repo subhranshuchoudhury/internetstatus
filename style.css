@@ -12,9 +12,9 @@ body{
 }
 
 hr{
-    border-top: 10px solid rgb(203, 253, 67);
+    border: none;
+    border-top: 30px solid rgb(203, 253, 67);
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .status-table{
@@ -51,6 +51,29 @@ h4{
 
 .log{
     color: yellow;
+}
+input{
+    text-align: center;
+    height: 30px;
+    font-weight: bold;
+    color: red;
+}
+button{
+    text-align: center;
+    margin: 1px auto 2px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 23px;
+
+}
+button:hover{
+    background-color: green;
+    color: white;
+
+}
+#moreDetails{
+    text-align: center;
+    color: white;
 }
 
 .footer{
