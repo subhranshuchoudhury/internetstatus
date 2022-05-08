@@ -10,7 +10,7 @@ var cI = (function() {
             var i = new Image();
             i.onload = this.online;
             i.onerror = this.offline;
-            i.src= `https://raw.githubusercontent.com/subhranshuchoudhury/internetstatus/main/test.png?${Math.random()}`
+            i.src= `test.png?${Math.random()}`
             checkingDisplay.textContent = "[ 🟡 Checking ]";
 
         }
