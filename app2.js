@@ -1,3 +1,4 @@
+const audio = new Audio("error.wav");
 var cI = (function() {
 
 
@@ -38,7 +39,7 @@ cI.offline = function(){
     displayStatus.textContent = "🚫 OFFLINE";
     displayStatus.style.color = "white";
     document.body.style.backgroundColor = 'red';
-    playError();
+    audio.play();
     checkingDisplay.textContent = "[Wait..]";
     displayStatusHolder.style.borderTop = `30px solid red`;
     document.querySelector(".log").textContent = `Offline : ${Date()}`;
@@ -64,14 +65,14 @@ function setDelay(){
 
 window.addEventListener("offline",()=>{
     document.querySelector("#status").textContent = "❌ NOT CONNECTED";
+    audio.play();
 })
 
 
-function playError(){
-    var audio = new Audio("error.wav");
-    audio.play()
-    // audio.currentTime = 0;
-}
+// function playError(){
+//     audio.play()
+//     // audio.currentTime = 0;
+// }
 
 function moreDetails(){
     const moreDetails = document.getElementById("moreDetails");

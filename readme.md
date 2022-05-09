@@ -1,4 +1,4 @@
-# Internet Status
+# Server Status Checker!
 
 ***
 > [🩺 CHECK YOUR SERVER STATUS](https://subhranshuchoudhury.github.io/internetstatus "View website")
