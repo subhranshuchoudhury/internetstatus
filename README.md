@@ -1,7 +1,7 @@
-# Internet Status
+# Server Status Checker!
 
 ***
-> [CHECK YOUR INTERNET STATUS](https://subhranshuchoudhury.github.io/internetstatus "View website")
+> [🩺 CHECK YOUR SERVER STATUS](https://subhranshuchoudhury.github.io/internetstatus "View website")
 
 ***
 ### Feature
@@ -13,7 +13,7 @@
 
 ---
 
-> DOWNLOAD WHOLE PROJECT USE ANYWHERE
+> [DOWNLOAD](https://github.com/subhranshuchoudhury/internetstatus/archive/refs/heads/main.zip "Download") WHOLE PROJECT USE ANYWHERE
 
 
 ---
@@ -22,7 +22,8 @@
 
 |RELEASE|VERSION|
 |-------|-------|
-| 6/MAY/2022 | 1.0   |
+| 6/MAY/2022 | 1.0.0|
+| 9/MAY/2022|1.1.0|
 
 ---
 > DEVELOPER: SUBHRANSHU CHOUDHURY
