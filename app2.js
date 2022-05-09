@@ -12,7 +12,7 @@ var cI = (function() {
             var i = new Image();
             i.onload = this.online;
             i.onerror = this.offline;
-            i.src= `https://raw.githubusercontent.com/subhranshuchoudhury/internetstatus/main/test.png?${String(Date())}`;
+            i.src= `test.png?${String(Date())}`;
             checkingDisplay.textContent = "[ 🟡 Checking ]";
 
         }
@@ -71,7 +71,7 @@ function setDelay(){
         if(detector==0){
             cI.offline()
         }
-    },delay+800);
+    },delay+900);
 }
 
 window.addEventListener("offline",()=>{
