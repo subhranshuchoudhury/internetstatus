@@ -1,4 +1,5 @@
 const audio = new Audio("error.wav");
+let detector = 0;
 var cI = (function() {
 
 
@@ -11,7 +12,7 @@ var cI = (function() {
             var i = new Image();
             i.onload = this.online;
             i.onerror = this.offline;
-            i.src= `test.png?${String(Date())}`;
+            i.src= `https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png?${String(Date())}`;
             checkingDisplay.textContent = "[ 🟡 Checking ]";
 
         }
@@ -22,6 +23,7 @@ var cI = (function() {
 
 
 cI.online = function(){
+    detector = 1;
     var displayStatus = document.querySelector("#status");
     var displayStatusHolder = document.querySelector("#status-holder");
     var checkingDisplay = document.querySelector("#checking");
@@ -54,13 +56,22 @@ function setDelay(){
 
     }else{
         delay = 3000;
-        alert("Delay cant be less than 3 Seconds!");
+        alert("Delay can't be less than 3 Seconds!");
     }
     document.querySelector(".log").textContent = `You set interval of ${delay/1000} seconds. Kindly wait ${delay/1000} seconds.`
     var intId = setInterval(function(){
+        detector = 0;
         cI.test()
+        
+        
 
     },delay);
+
+    setInterval(function(){
+        if(detector==0){
+            cI.offline()
+        }
+    },delay+800);
 }
 
 window.addEventListener("offline",()=>{
@@ -68,11 +79,6 @@ window.addEventListener("offline",()=>{
     audio.play();
 })
 
-
-// function playError(){
-//     audio.play()
-//     // audio.currentTime = 0;
-// }
 
 function moreDetails(){
     const moreDetails = document.getElementById("moreDetails");
