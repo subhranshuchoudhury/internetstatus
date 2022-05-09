@@ -10,7 +10,7 @@ var cI = (function() {
             var i = new Image();
             i.onload = this.online;
             i.onerror = this.offline;
-            i.src= `test.png?${Math.random()}`
+            i.src= `test.png?${String(Date())}`;
             checkingDisplay.textContent = "[ 🟡 Checking ]";
 
         }
@@ -24,7 +24,8 @@ cI.online = function(){
     var displayStatus = document.querySelector("#status");
     var displayStatusHolder = document.querySelector("#status-holder");
     var checkingDisplay = document.querySelector("#checking");
-    displayStatus.textContent = "🚀 SERVER ONLINE"
+    displayStatus.textContent = "🚀 ONLINE";
+    displayStatus.style.color = "rgb(203, 253, 67)"
     checkingDisplay.textContent = "[Wait..]";
     document.body.style.backgroundColor = "rgb(49, 43, 43)";
     displayStatusHolder.style.borderTop = `30px solid rgb(203, 253, 67)`;
@@ -35,6 +36,7 @@ cI.offline = function(){
     var displayStatusHolder = document.querySelector("#status-holder");
     var checkingDisplay = document.querySelector("#checking");
     displayStatus.textContent = "🚫 OFFLINE";
+    displayStatus.style.color = "white";
     document.body.style.backgroundColor = 'red';
     playError();
     checkingDisplay.textContent = "[Wait..]";
@@ -46,12 +48,17 @@ cI.offline = function(){
 
 function setDelay(){
     document.getElementById("timerTable").style.display = "none";
-    clearInterval(intId);
     var delay = document.querySelector("#delayTime").value*1000;
+    if(delay>=3000){
+
+    }else{
+        delay = 3000;
+        alert("Delay cant be less than 3 Seconds!");
+    }
     document.querySelector(".log").textContent = `You set interval of ${delay/1000} seconds. Kindly wait ${delay/1000} seconds.`
     var intId = setInterval(function(){
         cI.test()
-        delay = 1000;
+
     },delay);
 }
 
@@ -63,7 +70,7 @@ window.addEventListener("offline",()=>{
 function playError(){
     var audio = new Audio("error.wav");
     audio.play()
-    audio.currentTime = 0;
+    // audio.currentTime = 0;
 }
 
 function moreDetails(){
